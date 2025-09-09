@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3001/movies';
+const API_URL = 'https://movie-catalog-system-theta.vercel.app/movies';
 
 function fetchMovies() {
   fetch(API_URL)

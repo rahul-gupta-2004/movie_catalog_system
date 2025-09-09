@@ -1,4 +1,4 @@
-const API_URL = 'https://movie-catalog-system-ujp5.onrender.com/movies';
+const API_URL = 'http://localhost:3001/movies';
 
 function fetchMovies() {
   fetch(API_URL)

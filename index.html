@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Movies Data</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@1.9.6/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+    <div class="p-6 bg-white rounded">
+        <h1 class="text-2xl font-bold mb-4 text-center">Movie Catalog System</h1>
+        
+        <!-- Display data -->
+        <table class="w-full border">
+            <thead>
+                <tr class="bg-gray-200">
+                    <th class="p-2 border">ID</th>
+                    <th class="p-2 border">Title</th>
+                    <th class="p-2 border">Director</th>
+                    <th class="p-2 border">Genre</th>
+                    <th class="p-2 border">Year</th>
+                    <th class="p-2 border">Rating</th>
+                    <th class="p-2 border">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="moviesTable"></tbody>
+        </table>
+
+        <br>
+
+        <!-- Insert form -->
+         <h3>Insert Form Data</h3>
+        <form id="movieForm" class="mb-6 flex flex-col gap-2">
+            <input class="border p-2 rounded" type="text" id="title" placeholder="Title" required>
+            <input class="border p-2 rounded" type="text" id="director" placeholder="Director" required>
+            <input class="border p-2 rounded" type="text" id="genre" placeholder="Genre" required>
+            <input class="border p-2 rounded" type="number" id="release_year" placeholder="Release Year" required>
+            <input class="border p-2 rounded" type="number" step="0.1" id="rating" placeholder="Rating" required>
+            <button class="bg-blue-500 text-white p-2 rounded" type="submit">Add Movie</button>
+        </form>
+
+        <br>
+
+        <!-- Update form -->
+         <h3>Update Form Data</h3>
+        <form id="updateForm" class="mb-6 flex flex-col gap-2">
+            <input class="border p-2 rounded bg-gray-100" type="text" id="update_id" placeholder="ID" readonly>
+            <input class="border p-2 rounded" type="text" id="update_title" placeholder="Title" required>
+            <input class="border p-2 rounded" type="text" id="update_director" placeholder="Director" required>
+            <input class="border p-2 rounded" type="text" id="update_genre" placeholder="Genre" required>
+            <input class="border p-2 rounded" type="number" id="update_release_year" placeholder="Release Year" required>
+            <input class="border p-2 rounded" type="number" step="0.1" id="update_rating" placeholder="Rating" required>
+            <button class="bg-green-500 text-white p-2 rounded" type="submit">Update Movie</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
